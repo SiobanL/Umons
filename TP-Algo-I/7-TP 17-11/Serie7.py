@@ -108,8 +108,7 @@ def sobel(mat_img:list)-> list:
     sobelFilterImg = myCopy(mat_img)
     for i in range(0,len(mat_img)):
         for j in range(0,len(mat_img[i])):
-            (r, g, b) = (int(sq((gx[i][j][0]**2+gy[i][j][0]**2))), int(sq((gx[i][j][1]**2+gy[i][j][1]**2))), int(sq((gx[i][j][2]**2+gy[i][j][2]**2))))
-            sobelFilterImg[i][j] = (r,g,b)
+            sobelFilterImg[i][j] = (int(sq((gx[i][j][0]**2+gy[i][j][0]**2))), int(sq((gx[i][j][1]**2+gy[i][j][1]**2))), int(sq((gx[i][j][2]**2+gy[i][j][2]**2))))
     return sobelFilterImg
 
 
