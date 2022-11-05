@@ -82,7 +82,7 @@ def convolution(mat_img: list, mat: list)-> list:
                     r += mat[k][l] * mat_img[i-1+k][j-1+l][0] if (0 <= i-1+k < len(mat_img) and 0 <= j-1+l < len(mat_img[i])) else 0
                     g += mat[k][l] * mat_img[i-1+k][j-1+l][1] if (0 <= i-1+k < len(mat_img) and 0 <= j-1+l < len(mat_img[i])) else 0
                     b += mat[k][l] * mat_img[i-1+k][j-1+l][2] if (0 <= i-1+k < len(mat_img) and 0 <= j-1+l < len(mat_img[i])) else 0
-            convImg[i][j] = ((min(max(int(round(r)),0),255), min(max(int(round(g)),0),255), min(max(int(round(b)),0),255))) # cap r,g,b between 0 to 255 for rgb data format
+            convImg[i][j] = ((min(max(int(r),0),255), min(max(int(g),0),255), min(max(int(b),0),255))) # cap r,g,b between 0 to 255 for rgb data format
     return convImg
 
 
