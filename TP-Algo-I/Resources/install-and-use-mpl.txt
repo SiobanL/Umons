@@ -1,0 +1,17 @@
+pour installer pip en local :
+
+    python3 get-pip.py --user
+    echo "export PATH=~/.local/bin:$PATH" >> ~/.bashrc
+
+relancer le terminal, ou juste taper
+    bash
+
+pour installer matplotlib :
+
+    pip install --user matplotlib
+
+et pour changer le backend, dans le script :
+
+    import matplotlib as mpl
+
+    mpl.use('Agg') #ou un autre backend (celui-la est pour du png)
