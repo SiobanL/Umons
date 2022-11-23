@@ -4,6 +4,13 @@ from sort import *
 from umons_cpu import *
 from displayCpu import CpuPlot
 
+def average(lst: list)-> int:
+    add = 0
+    for i in lst:
+        add += i
+    return add/len(lst)
+
+
 def bubble_sort(t: list)-> None:
     for i in range(0,len(t)-1):
         for j in range(0,len(t)-i-1):
@@ -19,12 +26,13 @@ def illustration(items: list, *fs)-> None:
         for i in points:
             sumList = []
             for j in range(0,2):
-                sumList.append(umons_cpu.cpu_time(f, items[j]))
-            temp.append(sum(sumList))
+                sumList.append(umons_cpu.cpu_time(f, items[0])*100)
+            sumList = average(sumList)
+            print(sumList)
+            temp.append(sumList)
         grhaps.prepare(temp,f.__name__)
     grhaps.draw()
     input()
-
 
 def linear_search(lst: list, search_word: str)-> bool:
     for w in lst:
