@@ -9,11 +9,21 @@ def read(filename:str)-> str:
         return f.read()
 
 
-def readToDico(filename:str)-> dict:
+def readToDico(filename:str, mode: int)-> dict:
+    """_summary_
+
+    Args:
+        filename (str): _description_
+        mode (int): _description_
+
+    Returns:
+        dict: _description_
+    """
     dico = {}
+    mode = (0,2) if mode == 0 else (2,0)
     with open(filename,"r") as f:
         for line in f:
-         dico[line[0]]=line[2]
+         dico[line[mode[0]]]=line[mode[1]]
     return dico
 
 
@@ -34,29 +44,23 @@ def chiffrement_decalage(text: str, pos: int)-> str:
     return res
 
 
-def dechiffrement_decalage(text: str, pos: int):
+def dechiffrement_decalage(text: str, pos: int)-> str:
     chiffrement_decalage(text,-pos)
 
 
-def chiffrement_substitution(text_filename, dico_filename)-> str:
-    string = clear(read(text_filename))
-    dico = readToDico(dico_filename)
-    res =""
+def substitution(dico: dict, string: str)-> str:
+    res = ""
     for char in string:
         res += dico.get(char,char)
     return res
+
+
+def chiffrement_substitution(text_filename, dico_filename)-> str:
+    return substitution(readToDico(dico_filename,0),clear(read(text_filename)))
 
 
 def dechiffrement_substitution(text_filename, dico_filename):
-    string = clear(read(text_filename))
-    dico = {}
-    with open(dico_filename,"r") as f:
-        for line in f:
-         dico[line[2]]=line[0]
-    res =""
-    for char in string:
-        res += dico.get(char,char)
-    return res
+    return substitution(readToDico(dico_filename,1),clear(read(text_filename)))
 
 
 def decouvre_cle(text_filename, i):
