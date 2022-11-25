@@ -1,7 +1,7 @@
 from sys import argv
 
 
-error = "Erro 404: not found function or parameter"
+error: str = "Error 404: function or parameter not found"
 
 
 def read(filename:str)-> str:
@@ -10,17 +10,20 @@ def read(filename:str)-> str:
 
 
 def readToDico(filename:str, mode: int)-> dict:
-    """_summary_
+    """ This function read all data in a file and create a dict.
+        There is 2 modes one for have date in the same direction
+        as in the file or inverse these direction.
 
     Args:
-        filename (str): _description_
-        mode (int): _description_
+        filename (str): file path
+        mode (int): choice 1 = same direction as in the file
+                    choice 2 = the opposite than in the file
 
     Returns:
-        dict: _description_
+        dict: return dictionnary
     """
-    dico = {}
-    mode = (0,2) if mode == 0 else (2,0)
+    dico: dict = {}
+    mode: tuple = (0,2) if mode == 0 else (2,0)
     with open(filename,"r") as f:
         for line in f:
          dico[line[mode[0]]]=line[mode[1]]
@@ -28,7 +31,7 @@ def readToDico(filename:str, mode: int)-> dict:
 
 
 def clear(string: str)-> str:
-    return "".join([c for c in string.lower() if "a"<= c <="z"])
+    return "".join([c for c in string.lower() if "a"<= c <="z"])       # faster function !
     # return "".join(filter(lambda x: "a" <= x <= "z",string.lower())) # slower than under
     # res = ""                                                         # faster than upper
     # for char in string.lower():                                      # but slower than return "".join([c for c in string.lower() if "a"<= c <="z"])
@@ -38,7 +41,7 @@ def clear(string: str)-> str:
 
 
 def chiffrement_decalage(text: str, pos: int)-> str:
-    res = ""
+    res: str = ""
     for char in clear(text):
         res += chr(((ord(char) - 97 - pos)%26)+97)
     return res
@@ -49,7 +52,7 @@ def dechiffrement_decalage(text: str, pos: int)-> str:
 
 
 def substitution(dico: dict, string: str)-> str:
-    res = ""
+    res: str = ""
     for char in string:
         res += dico.get(char,char)
     return res
@@ -96,9 +99,3 @@ if __name__ != "__main__":
         print(decouvre_cle(read(argv[3]),int(argv[4])))
     else:
         print(error)
-
-print(chiffrement_substitution("test.txt","dico.txt"))
-print(dechiffrement_substitution("test2.txt","dico.txt"))
-# print(chiffrement_decalage("abcdefghijklmnopqrstuvwxyz",2))
-# print(clear(read("analyse.txt")))
-# print(clear("CouCou c'est Sioéban"))
