@@ -71,7 +71,7 @@ def returnLastLetter(inputList: list, referenceList: list)-> tuple:
 def returnStr(referenceList: list)-> str:
     t: list = []
     for i in range(0, len(referenceList)):
-        if referenceList[i][1] == 0.:
+        if referenceList[i][1] == 0.0:
             t.append(referenceList[i][0])
     return t[len(t)-1]
 
@@ -129,7 +129,7 @@ def decodeAnalyse()-> str:
     return res
 
 
-if __name__ == "__main__":
+if __name__ != "__main__":
     if argv[1] == "d": 
         if argv[2] == "c":
             print(encrypt_gap(read(argv[3]),int(argv[4])))
@@ -166,3 +166,4 @@ if __name__ == "__main__":
 #     #     if "a" <= char <= "z":                                        # return "".join([c for c in string.lower() 
 #     #         res += char                                               # if "a"<= c <="z"])
 #     # return res 
+print(decodeAnalyse())
