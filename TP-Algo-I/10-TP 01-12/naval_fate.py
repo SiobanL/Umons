@@ -14,5 +14,7 @@ Options:
     --drifting Drifting mine.
 """
 from docopt import docopt
+
+
 arguments = docopt(__doc__, version="Naval Fate 2.0")
 print(arguments)
