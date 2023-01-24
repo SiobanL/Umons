@@ -112,9 +112,22 @@ def sobel(mat_img:list)-> list:
     return sobelFilterImg
 
 
+# def circle(img, center: tuple, radius, color):
+#     cx, cy = center
+#     for i in range(len(img)):
+#         for j in range(len(img[i])):
+#             # len(img)//2 len(img[i]//2)+radius color 1 case
+#             # len(img)//2 len(img[i]//2)+radius-1 color 3 case
+#             # radius == midle Pos
+            
+#     return
+
+
 def main()-> None:
-    filename = 'imgTest/image_test.jpg'
+    filename = 'imgTest/Sans titre.png'
     matrix_image = uImg.load(filename)
+    print(matrix_image)
+    circle(matrix_image, (len(matrix_image/2)(len(matrix_image[0])/2),5,(000,000,000)))
     uImg.save(greyscale(matrix_image),"imgResult/image_testRG1","jpg")
     uImg.save(greyscale2(matrix_image),"imgResult/image_testRG2","jpg")
     
@@ -142,3 +155,4 @@ def main()-> None:
 
 
 main()
+

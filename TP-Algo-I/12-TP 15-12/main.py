@@ -11,7 +11,6 @@ def plus_grand_bord2(w: str)-> str:
         return new
     return None
 
-
 def plus_grand_bord(w: str)-> str:
     pos = 0
     for i in range(1,len(w)):
@@ -21,9 +20,14 @@ def plus_grand_bord(w: str)-> str:
 
 
 def intersection(v: str,w: str)-> str:
-    for i in range(0,len(w) if len(v)> len(w) else len(w)):
-        pass
-    return
+    res = ""
+    for i in range(0,len(v)):
+        vTest = v[i]
+        for j in range(0,i):
+            if (vTest+v[i+j] in w) or (not(i+j > len(v))):
+                vTest += v[i+j]
+    return vTest
+
 
 def anagrammes(v: str, w: str)-> bool:
     return sorted(list(v)) == sorted(list(w))
@@ -40,6 +44,7 @@ def anagrammes(v: str, w: str)-> bool:
 ###|Test-02|######################################
 print(intersection("programme", "grammaire"))
 print(intersection("cardinalite", "ordinateur"))
+print(intersection("ornithornithorique", "ornithorique"))
 ##################################################
 
 

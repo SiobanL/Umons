@@ -1,4 +1,4 @@
-class Rational():
+class Rational(data,other):
     def __init__(self, a: str = None, b:int = 1) -> None:
         from math import gcd
         
