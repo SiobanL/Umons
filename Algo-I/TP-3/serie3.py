@@ -1,3 +1,4 @@
+
 """
     this script draw different fractal as kosh fractal as the fct who have the same name,
     a flake is draw with this too. there is a fct square who draw square fractal and a 
