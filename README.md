@@ -9,7 +9,7 @@ These repository contain all umons projects as TPs or projects for bac 1 info.
     -  [x] Slides
     -  [x] Ressources (contains old lessons, tps, exams)
     -  [x] Serie 1 to 4
-    - ...
+    -  [x] ...
 
 ### Comment:
 - upload future TP
