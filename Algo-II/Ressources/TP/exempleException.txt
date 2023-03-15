@@ -1,0 +1,11 @@
+try {
+	return Integer.parseInt(res);
+} catch (NumberFormatException e) {
+	System.out.println("Not a number");
+}
+
+
+
+public class BoundOutreachedException extends RuntimeException{
+
+}
