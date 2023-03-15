@@ -9,6 +9,10 @@ These repository contain all Umons projects as TPs or projects for bac 1 info. ð
     -  [x] Ressources (contains old lessons, tps, exams)
     -  [x] Serie 1 to 4
     -  [x] ...
+- ### Fonctio (Assembly)
+    - [x] Slides ch1 to ch4
+    - [x] Serie 1 to 4
+    - [x] ...
 
 ### Comment:
 - upload future TP
