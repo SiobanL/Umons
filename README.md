@@ -1,6 +1,5 @@
 # Umons files:
-These repository contain all umons projects as TPs or projects for bac 1 info.
-🖥💻🪐🌌
+These repository contain all Umons projects as TPs or projects for bac 1 info. 🖥💻🪐🌌
 
 - ### I-TP of Algo I (Python)
     - [x] Serie 1 to 13
