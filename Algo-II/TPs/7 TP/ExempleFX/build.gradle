@@ -1,0 +1,25 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+compileJava.options.encoding = "UTF-8"
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+}
+
+application {
+    // C'est le nom de la classe principale (contenant la méthode main). On
+    // doit donner les packages s'il y en a. Ici, Main est dans le package
+    // exemplefx.
+    mainClass = 'exemplefx.Main'
+}
+
+javafx {
+    version = "11"
+    modules = [ 'javafx.controls' ]
+}

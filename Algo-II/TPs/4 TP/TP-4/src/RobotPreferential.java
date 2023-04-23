@@ -43,9 +43,6 @@ public class RobotPreferential extends Robot {
                 laby.go(direction);
                 return true;
             }
-        }
-        for (var direction : tempDir) {
-            var dest = lookup(position, direction);
             if (!laby.isWall(direction) && !vWalls.get(dest)) {
                 vWalls.set(dest, true);
                 position = dest;

@@ -1,0 +1,29 @@
+plugins {
+    id 'java' // Utilise le plugin Java
+    id 'application' // On développe une application
+}
+
+repositories {
+    // Endroit où trouver les dépendances
+    // (serveur jcenter.bintray.com)
+    mavenCentral()
+}
+
+test {
+    // Il faut utiliser JUnit pour les tests
+    useJUnitPlatform()
+}
+
+dependencies {
+    // Pour compiler les tests, il faut utiliser JUnit.
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
+    // Il faut une autre librairie pour exécuter les tests.
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.0")
+    // Exemple de dépendance
+    implementation 'com.sun.mail:javax.mail:1.6.2'
+}
+
+application {
+    // Classe principale à exécuter
+    mainClassName = 'monprojet.ClassePrincipale'
+}

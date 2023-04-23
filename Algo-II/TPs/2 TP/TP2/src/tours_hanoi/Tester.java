@@ -46,7 +46,4 @@ public class Tester {
             solve(state,n-1,tInt,tDst,tSrc);
         }
     }
-
-    public static void main(String[] args) {
-    }
 }
