@@ -1,0 +1,1 @@
+Vider les fichiers de ce répertoire avant le cours: construire les codes en séance
