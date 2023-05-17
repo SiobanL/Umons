@@ -112,6 +112,7 @@ public class MyLinkedList<T> {
             }
         }
     }
+    @Override
     public String toString (){
         String res = "";
         Node current = head;
@@ -126,6 +127,7 @@ public class MyLinkedList<T> {
         }
         return "["+res+"]";
     }
+    @Override
     public LinkedList clone (){
         Node current = head;
         LinkedList temp = new LinkedList<>();
