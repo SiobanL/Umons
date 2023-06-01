@@ -1,9 +1,8 @@
     .data
 more: .asciiz "Trop grand\n"
-equal: .asciiz "Valeur acceptée\n"
+equal: .asciiz "Valeur acceptée: "
 default: .asciiz "Entrez un nombre: "
     .text
-
 main:
     la      $a0, default
     li      $v0, 4
