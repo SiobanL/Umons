@@ -107,10 +107,6 @@ def tree(t,x,a,n):
         tree(t,x*0.7,a*0.7,n-1)
         turnLeft(t,a)
         moveBackward(t,x)
-        
-    while n <= 1:
-        moveForward(t,x)
-        moveBackward(t,x)
 
 
 #-----------------------#
@@ -128,7 +124,7 @@ def tree(t,x,a,n):
 
 #-----------------------#
 # stand_up(samy)
-# tree(samy,100,20,4)
+# tree(samy,100,45,6)
 #-----------------------#
 
 wait()
