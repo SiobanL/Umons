@@ -26,7 +26,7 @@ public class BiblioTab extends Bibliotheque{
     @Override
     public void removeOuvrage(int id) {
         int pos = 0;
-        while(pos < i && bookshelve[pos].getCote() != cote){
+        while(pos < i && bookshelve[pos].getCote() != id){
             pos++;
         }
         while(pos < i -1){
